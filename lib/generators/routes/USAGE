@@ -1,0 +1,3 @@
+Usage info:
+script/generate routes 
+This creates config/routes.yml and lib/tasks/generate_files.rake files

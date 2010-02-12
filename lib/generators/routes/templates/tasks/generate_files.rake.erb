@@ -1,0 +1,15 @@
+namespace :smart_router do
+  desc "Generate controller and view files from routes.yml"
+  task :generate_files do
+    controller_name = ENV['CONTROLLER']
+    controller_name ||= 'routes'
+    config = YAML::load(File.open(File.dirname(__FILE__) + '/../../config/routes.yml'))
+    routes = config['simple_routes']
+    methods = []
+    routes.each{ |key, val| methods += val.keys }
+    methods = methods.map{|m| m.gsub("/", "_")}
+    #Use Rails controller generator
+    cmd = "script/generate controller #{controller_name} #{methods.join(' ')} "
+    system(cmd)
+  end
+end
