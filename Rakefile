@@ -5,11 +5,11 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "smart-router"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Configurable Named routes on top of rails}
+    gem.description = %Q{same as above}
     gem.email = "nandayadav@gmail.com"
     gem.homepage = "http://github.com/nandayadav/smart-router"
-    gem.authors = ["Nanda"]
+    gem.authors = ["Nanda Yadav,Nate Hopkins"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
